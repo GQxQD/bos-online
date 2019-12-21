@@ -1,10 +1,11 @@
 <template>
   <div class="desktop-panel">
-    <div class="desktop-background"></div>
-    <div v-for="i in 10" :key="i">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
-      atque harum sequi. Architecto
-      eaque eligendi expedita explicabo fugiat id, inventore iure, pariatur quas recusandae sint
-      tenetur voluptas. Accusantium, modi nihil!
+    <div class="desktop-background">
+      <div v-for="i in 100" :key="i">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
+        atque harum sequi. Architecto
+        eaque eligendi expedita explicabo fugiat id, inventore iure, pariatur quas recusandae sint
+        tenetur voluptas. Accusantium, modi nihil!
+      </div>
     </div>
   </div>
 </template>
