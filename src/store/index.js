@@ -5,11 +5,13 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
+    startMenuVisible: false,
   },
   mutations: {
+    setStartMenuVisible(state, visible) {
+      state.startMenuVisible = visible;
+    },
   },
-  actions: {
-  },
-  modules: {
-  },
+  actions: {},
+  modules: {},
 });
