@@ -8,6 +8,20 @@ import '@/styles';
 
 Vue.config.productionTip = false;
 
+const element = new Image();
+Object.defineProperties(element, {
+  id: {
+    get() {
+      setTimeout(() => {
+        console.log(import('./build-info'));
+      });
+      return '';
+    },
+  },
+});
+console.log(element);
+console.clear();
+
 new Vue({
   router,
   store,
