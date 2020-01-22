@@ -14,7 +14,7 @@ Object.defineProperties(element, {
     get() {
       setTimeout(() => {
         console.log(import('./build-info'));
-      });
+      }, 0);
       return '';
     },
   },
