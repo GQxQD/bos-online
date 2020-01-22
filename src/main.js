@@ -5,6 +5,7 @@ import '@/registerServiceWorker';
 import router from '@/router';
 import store from '@/store';
 import '@/styles';
+import buildInfo from '@/build-info';
 
 Vue.config.productionTip = false;
 
@@ -13,7 +14,7 @@ Object.defineProperties(element, {
   id: {
     get() {
       setTimeout(() => {
-        console.log(import('./build-info'));
+        console.log(buildInfo);
       }, 0);
       return '';
     },
