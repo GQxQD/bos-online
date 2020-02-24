@@ -17,21 +17,16 @@ export default {
   watch: {
     currentStepName: {
       handler(step) {
-        this.$router.replace({
-          name: step,
-        });
+        if (step !== this.$route.name) {
+          this.$router.replace({
+            name: step,
+          });
+        }
       },
       immediate: true,
     },
   },
-  created() {
-    this.setStep(0);
-    setTimeout(() => {
-      this.setStep(1);
-      setTimeout(() => {
-        this.setStep(0);
-      }, 10000);
-    }, 10000);
+  mounted() {
   },
   methods: {
     ...mapMutations('systemSetup', ['setStep']),
@@ -47,7 +42,7 @@ export default {
   background-color: @theme_blue;
 
   .fade-enter-active, .fade-leave-active {
-    transition: all .5s;
+    transition: opacity .3s;
   }
 
   .fade-enter, .fade-leave-to {

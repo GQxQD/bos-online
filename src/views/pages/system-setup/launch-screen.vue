@@ -10,11 +10,20 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex';
 import BLaunchLoading from '@/components/b-launch-loading/index';
 
 export default {
   name: 'launch-screen',
   components: { BLaunchLoading },
+  mounted() {
+    setTimeout(() => {
+      this.increaseStep();
+    }, 5000);
+  },
+  methods: {
+    ...mapMutations('systemSetup', ['increaseStep']),
+  },
 };
 </script>
 
@@ -23,10 +32,11 @@ export default {
   position: relative;
   width: 100%;
   height: 100%;
+  cursor: none;
 
   .logo-image {
     position: absolute;
-    top: 20%;
+    top: 25%;
     left: 50%;
     width: 120px;
     height: 120px;

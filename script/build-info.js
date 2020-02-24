@@ -4,5 +4,5 @@ const { version } = require('../package');
 
 fs.writeFileSync(path.join(__dirname, '../src/build-info.json'), JSON.stringify({
   version,
-  buildTIme: new Date().toLocaleString(),
+  buildTime: new Date().toLocaleString(),
 }));

@@ -7,8 +7,10 @@ const systemSetup = {
   state: {
     // 步骤列表
     stepList: [
+      RouteEnums.SETUP_BOOT,
       RouteEnums.SETUP_LAUNCH,
       RouteEnums.SETUP_LANGUAGE,
+      RouteEnums.SETUP_INSTALL,
     ],
     // 当前步骤
     currentStep: 0,
