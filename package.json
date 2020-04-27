@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "npm run prepare && vue-cli-service build",
+    "build": "npm run prepare && vue-cli-service build && npm run replace-workbox",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
-    "prepare": "node ./script/build-info.js"
+    "prepare": "node ./script/build-info.js",
+    "replace-workbox": "node ./script/replace-workbox.js"
   },
   "dependencies": {
     "core-js": "^3.4.3",
