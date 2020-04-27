@@ -38,6 +38,9 @@
     "vue-cli-plugin-style-resources-loader": "^0.1.4",
     "vue-template-compiler": "^2.6.10"
   },
+  "eslintIgnore": [
+    "public/workbox-cdn/*"
+  ],
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
